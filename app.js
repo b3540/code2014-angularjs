@@ -1,4 +1,9 @@
-﻿function greetingController($scope) {
+﻿/// <reference path="scripts/angular.js" />
+/// <reference path="scripts/angular-resource.js" />
+
+var app = angular.module('SampleApp', []);
+
+app.controller('SampleController', function ($scope) {
     $scope.bookmarks = [
         { Title: "Twitter", URL: "https://twitter.com", Rating: 5 },
         { Title: "facebook", URL: "https://facebook.com", Rating: 1 }
@@ -15,4 +20,4 @@
         if (!confirm('sure?')) return;
         $scope.bookmarks.splice(index, 1);
     };
-}
+});
