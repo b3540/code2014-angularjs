@@ -8,7 +8,10 @@
 
     <ul>
         <li ng-repeat="bookmark in bookmarks">
-            <div>{{bookmark.Title}}</div>
+            <div>
+                {{bookmark.Title}}
+                <a href="#" ng-click="removeBookmark($index)">delete</a>
+            </div>
             <div>
                 <a ng-href="{{bookmark.URL}}" target="_blank">
                     {{bookmark.URL}}

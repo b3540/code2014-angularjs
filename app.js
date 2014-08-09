@@ -9,5 +9,10 @@
     $scope.addBookmark = function () {
         $scope.bookmarks.push($scope.newbookmark);
         $scope.newbookmark = { Title: "", URL: "", Rating: 0 };
-    }
+    };
+
+    $scope.removeBookmark = function (index) {
+        if (!confirm('sure?')) return;
+        $scope.bookmarks.splice(index, 1);
+    };
 }
