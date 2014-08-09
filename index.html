@@ -18,6 +18,21 @@
         </li>
     </ul>
 
+    <form ng-submit="addBookmark()">
+        <p>Title <input type="text" ng-model="newbookmark.Title" /></p>
+        <p>URL <input type="text" ng-model="newbookmark.URL"/></p>
+        <p>Rating
+            <select ng-model="newbookmark.Rating">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </p>
+        <p><input type="submit" value="add"/></p>
+    </form>
+
     <script src="scripts/angular.js"></script>
     <script src="app.js"></script>
 </body>
