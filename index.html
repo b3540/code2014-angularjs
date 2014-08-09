@@ -6,9 +6,17 @@
 <body ng-app ng-controller="greetingController">
     <h1>My 1st AngularJS</h1>
 
-    <p><input type="text" ng-model="greeting.text" /></p>
-
-    <p>{{greeting.text}}</p>
+    <ul>
+        <li ng-repeat="bookmark in bookmarks">
+            <div>{{bookmark.Title}}</div>
+            <div>
+                <a ng-href="{{bookmark.URL}}" target="_blank">
+                    {{bookmark.URL}}
+                </a>
+            </div>
+            <div>{{bookmark.Rating}}</div>
+        </li>
+    </ul>
 
     <script src="scripts/angular.js"></script>
     <script src="app.js"></script>
